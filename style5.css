@@ -1,0 +1,385 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* HELA WRAPPEN */
+.container {
+  display: flex;
+  flex-flow: row wrap;
+  text-align: center;
+  height: calc(100vh - 100px)
+}
+
+.container>* {
+  flex: 1 100%;
+
+}
+
+/* HEADER */
+.header {
+  padding: auto;
+  background-color: #fdfaf6;
+}
+
+
+.header h1 {
+  color: #412c0f;
+  padding: 2%;
+}
+
+/* HERO */
+.hero-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/pugs_hero.png");
+  height: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+/* NAVBAR */
+#navbar {
+  padding: 1%;
+  overflow: hidden;
+  background-color: #221608;
+}
+
+.logotype img {
+  text-decoration: none;
+  float: left;
+  display: block;
+}
+
+
+/* NAV-LÄNKAR */
+.navbar-button a {
+  text-decoration: none;
+  float: right;
+  display: block;
+  color: #fdfaf6;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+}
+
+#navbar img {
+  max-height: 50%;
+  float: left;
+}
+
+#navbar a:hover {
+  background-color: #fdfaf6;
+  color: black;
+}
+
+
+/* MAIN */
+.main {
+  text-align: left;
+  background-color: #fdfaf6;
+
+}
+
+
+/* CENTERING PÅ SIDAN */
+.centered {
+  background-color: #fdfaf6;
+  padding: 10px;
+}
+
+/* ALLA BLOGGPOSTER */
+.allposts {
+  background-color: #fdfaf6;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  padding: 1%;
+}
+
+/* ETT BLOGGINLÄGG KORT I FLÖDET*/
+.oneblogpost {
+  background-color: #f8eee1;
+  padding: 1em;
+  margin: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  border-radius: 5px;
+  max-width: 100%;
+}
+
+.oneblogpost img {
+  float: left;
+  max-width: 20%;
+  padding: 1%;
+}
+
+.oneblogpost p {
+  text-align: justify;
+  padding: 0.5%;
+}
+
+.oneblogpost:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* SEPARAT BLOGGINLÄGG */
+.post1 {
+
+  background-color: #f8eee1;
+  padding: 1em;
+  margin: auto;
+  margin-top: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+  border-radius: 5px;
+  max-width: 70%;
+}
+
+/* CENTERING PÅ POST1-SIDAN */
+.post1 h1 {
+  font-size: 5vh;
+  text-align: center;
+  padding: 1vh;
+}
+
+.post1-left h1 {
+  font-size: 5vh;
+}
+
+.post1-left img {
+  float: left;
+  max-width: 20%;
+  padding: 1%;
+}
+
+.post1-right img {
+  float: right;
+  max-width: 20%;
+  padding: 1%;
+}
+
+.post1 p {
+  text-align: justify;
+  padding: 0.5%;
+}
+
+.post1:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* ASIDE */
+.aside {
+  background-color: #f4e5d1;
+  margin: 2%;
+  flex: 1;
+  width: 30%;
+  padding-top: 1%;
+}
+
+/*  ASIDE-BILD */
+.profile img {
+  padding: 2%;
+  max-width: 50%;
+}
+
+/* ASIDE-TEXT */
+.profile p {
+  padding: 4%;
+}
+
+/* MEDIA QUERY */
+@media all and (min-width: 800px) {
+
+  .main,
+  .post1main {
+    flex: 3;
+  }
+
+  .aside {
+    order: 1
+  }
+
+  .main {
+    order: 1;
+  }
+
+  .footer {
+    order: 4;
+  }
+}
+
+@media all and (min-width: 600px) {
+  .aside {
+    flex: 1;
+  }
+
+  .post1main {
+    padding: 0;
+  }
+}
+
+@media all and (max-width:30em) {
+  .button-1 {
+    display: block;
+    margin: 0.4em auto;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .navbar a {
+    float: none;
+    display: block;
+  }
+}
+
+/* KNAPPAR */
+
+.button-1 {
+  align-content: end;
+  display: inline-block;
+  padding: 0.5em 3em;
+  margin: 0 0.3em 0.3em 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  background-color: #412c0f;
+  color: #fdfaf6;
+  text-align: center;
+  transition: all 0.15s;
+}
+
+.button-2 {
+  align-content: end;
+  display: inline-block;
+  padding: 0.5em 3em;
+  margin: 0 0.3em 0.3em 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  background-color: #fdfaf6;
+  color: #412c0f;
+  text-align: center;
+  transition: all 0.15s;
+}
+
+.button-2:hover {
+  color: #fdfaf6;
+  background-color: #412c0f;
+}
+
+.button-2:active {
+  color: #fdfaf6;
+  border-color: #fdfaf6;
+}
+
+.right {
+  display: inline-block;
+  float: right;
+}
+
+.button-1:hover {
+  color: #353535;
+  background-color: #fdfaf6;
+}
+
+.button-1:active {
+  color: #412c0f;
+  border-color: #412c0f;
+}
+
+/* TAGGAR */
+.tags {
+  margin-top: 1vh;
+  font-size: 70%;
+  font-style: italic;
+  float: left;
+}
+
+
+/* SÖKFÄLT */
+.search {
+  display: flex;
+  width: 80%;
+  align-items: center;
+  justify-content: center;
+  background: #221608;
+  border-radius: 5px;
+  margin: 0 auto;
+
+}
+
+.search input[type="text"] {
+  color: black;
+  text-align: center;
+}
+
+/* SÖKKNAPP */
+.search button {
+  background-color: #221608;
+  color: #fdfaf6;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+/* SÖKKNAPP IKON */
+.search button img {
+  max-width: 50%;
+  color: #221608;
+  background-color: #221608;
+}
+
+
+/* SÖKKNAPP IKON - AKTIV (TRYCKS NER) */
+.search button:active {
+  background-color: #fdfaf6;
+  color: #412c0f;
+}
+
+
+
+
+/* FOOTER */
+.footer {
+  background-color: #221608;
+  color: #fdfaf6;
+  border-color: #221608;
+  padding: 20px;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.footer h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.footer p {
+  text-align: center;
+}
+
+.svg {
+  color: white;
+}
+
+
+/* SOCIALA MEDIER-IKONER */
+.footer-social {
+  padding: 1vh;
+  float: right;
+}
+
+.footer-social img {
+  width: 50px;
+}
